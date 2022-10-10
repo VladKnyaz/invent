@@ -1,35 +1,30 @@
 'use strict';
-// var cells = [
-//   // ПОЛУЧАЕМ ИЗ БАЗЫ ДАННЫХ
-//   { id: 1, idItem: null, isFull: false, type: null, value: null },
-//   { id: 2, idItem: 1, isFull: true, type: 'clothes', value: null },
-//   { id: 3, idItem: 4, isFull: true, type: 'bullets', value: 50 },
-//   { id: 4, idItem: 3, isFull: true, type: 'weapon', value: null },
-//   { id: 5, idItem: 5, isFull: true, type: 'bullets', value: 64 }, // Не правильный id предмета
-// ];
+var cells = [
+  // ПОЛУЧАЕМ ИЗ БАЗЫ ДАННЫХ
+  { id: 1, idItem: null, isFull: false, type: null, value: null },
+  { id: 2, idItem: 1, isFull: true, type: 'clothes', value: null },
+  { id: 3, idItem: 4, isFull: true, type: 'bullets', value: 50 },
+  { id: 4, idItem: 3, isFull: true, type: 'weapon', value: null },
+  { id: 5, idItem: 5, isFull: true, type: 'bullets', value: 64 }, // Не правильный id предмета
+];
 window.onerror = function (msg, url, line) {
   console.log(`${msg} at ${url} line ${line.toString()}`);
 };
 var allItems = [];
 var UserCells = [];
-var cells = [];
+// var cells = [];
 
-function setCellsAndItems(userCell, items) {
-  allItems = items;
-  UserCells = userCell;
-  cells = Array.from({ length: 10 }, (_, i) => {
-    if (!UserCells[i]) return { id: i + 1, type: null, value: null, idItem: null, isFull: false };
-    return UserCells[i];
-  });
-  startInventory();
-}
+// function setCellsAndItems(userCell, items) {
+//   allItems = items;
+//   UserCells = userCell;
+//   cells = Array.from({ length: 10 }, (_, i) => {
+//     if (!UserCells[i]) return { id: i + 1, type: null, value: null, idItem: null, isFull: false };
+//     return UserCells[i];
+//   });
+//   startInventory();
+// }
 
 const inventory = document.querySelector('.inventory');
-
-function startInventory() {
-  if (!cells || cells == []) {
-    return startInventory();
-  }
 
   cells.map((cell) => {
     let div = document.createElement('div');
@@ -321,4 +316,4 @@ function startInventory() {
       dragObject = {};
     };
   });
-}
+
