@@ -20,8 +20,8 @@ let allItems = [
     type: 'weapon',
     idWeapon: 'weapon_machinepistol',
   },
-  { id: 4, name: 'Патроны 0.5мм', srcImg: 'img/bullets.svg', type: 'bullets' },
-  { id: 5, name: 'Патроны 1мм', srcImg: 'img/bullets.svg', type: 'bullets' },
+  { id: 4, name: 'Патроны 0.5мм', srcImg: 'img/bullets.svg', type: 'bullets', typeBullets: '0.5' },
+  { id: 5, name: 'Патроны 1мм', srcImg: 'img/bullets.svg', type: 'bullets', typeBullets: '1' },
 ];
 var UserCells = [];
 // var cells = [];
