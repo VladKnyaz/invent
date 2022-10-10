@@ -10,7 +10,19 @@ var cells = [
 window.onerror = function (msg, url, line) {
   console.log(`${msg} at ${url} line ${line.toString()}`);
 };
-var allItems = [];
+let allItems = [
+  { id: 1, name: 'Футболка от гучи', srcImg: 'img/t-shirt.svg', type: 'clothes' },
+  { id: 2, name: 'Футболка от Влада', srcImg: 'img/t-shirt.svg', type: 'clothes' },
+  {
+    id: 3,
+    name: 'Пистолет пулемёт',
+    srcImg: 'img/weapon.svg',
+    type: 'weapon',
+    idWeapon: 'weapon_machinepistol',
+  },
+  { id: 4, name: 'Патроны 0.5мм', srcImg: 'img/bullets.svg', type: 'bullets' },
+  { id: 5, name: 'Патроны 1мм', srcImg: 'img/bullets.svg', type: 'bullets' },
+];
 var UserCells = [];
 // var cells = [];
 
